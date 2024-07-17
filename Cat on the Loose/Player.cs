@@ -92,6 +92,7 @@ namespace Cat_on_the_Loose
                 Hunger = 100;
             }
             Console.WriteLine($"Dein Hunger hat zugenommen, er liegt nun bei {Hunger}/100");
+            CheckPlayerState();
         }
 
         public void IncreaseFatigue(int menge)
@@ -102,6 +103,7 @@ namespace Cat_on_the_Loose
                 Fatigue = 100;
             }
             Console.WriteLine($"Deine Müdigkeit hat zugenommen, sie liegt nun bei {Fatigue}/100");
+            CheckPlayerState();
         }
 
         public void ReduceHealth(int damage)
@@ -112,26 +114,46 @@ namespace Cat_on_the_Loose
                 CurrentPlayer.Health = 0;
             }
             Console.WriteLine($"Deine Gesundheit ist gesunken, sie liegt nun bei {Health}/200");
+            CheckPlayerState();
         }
 
-        public static void GameOver(StateOfGame gameState, bool isPlaying)
+
+        private void CheckPlayerState()
         {
-            Console.Clear();
-            Console.WriteLine("Du hast zu viel Schaden erlitten, deine Gesundheit ist bei 0. Game Over!");
-
-            Console.WriteLine("Möchtest du das Spiel von vorn beginnen? (ja/nein)");
-            string input = Console.ReadLine().ToLower();
-            if (input != "ja")
+            if (Hunger == 100 || Fatigue == 100 || Health == 0)
             {
-                isPlaying = false;
-            }
-            else
-            {
-                gameState.Chapter1Done = false;
-                gameState.Chapter2Done = false;
-                //....
-                Console.Clear();
+                GameOver();
             }
         }
+
+        private void GameOver()
+        {
+            Console.WriteLine("Du bist ohnmächtig geworden. Spiel beendet.");
+            Console.WriteLine("\nDrücke <Enter> um das Spiel zu verlassen.");
+            Console.ReadKey();
+            Environment.Exit(0); // Programm-Ende
+        }
+
+
+
+        //public static void GameOver(StateOfGame gameState, bool isPlaying)
+        //{
+        //    Console.Clear();
+        //    Console.WriteLine("Du hast zu viel Schaden erlitten, deine Gesundheit ist bei 0. Game Over!");
+
+        //    Console.WriteLine("Möchtest du das Spiel von vorn beginnen? (ja/nein)");
+        //    string input = Console.ReadLine().ToLower();
+        //    if (input != "ja")
+        //    {
+        //        isPlaying = false;
+        //    }
+        //    else
+        //    {
+        //        gameState.Chapter1Done = false;
+        //        gameState.Chapter2Done = false;
+        //        //....
+        //        Console.Clear();
+        //    }
+        //}
     }
 }

@@ -10,6 +10,7 @@ namespace Cat_on_the_Loose
     using static Program;
     using static Player;
     using static StateOfGame;
+    using ConsoleHelpers;
     internal class Death
     {
         //public static Death PlayerDeath = new Death();

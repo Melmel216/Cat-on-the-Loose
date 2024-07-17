@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Cat_on_the_Loose
 {
     using static Player;
+    using ConsoleHelpers;
     internal class Chapter2 : Chapter
     {
         public override void Start()
@@ -19,9 +20,9 @@ namespace Cat_on_the_Loose
             Console.WriteLine("\nEin riesiger Park liegt vor dir. Alles scheint still und friedlich, es ist niemand in Sicht....");
             Thread.Sleep(3000);
             Console.WriteLine("\nDirekt vor dir steht ein hoch gewachsener Baum, er scheint sehr alt zu sein.");
-            Thread.Sleep(4000);
+            Thread.Sleep(3000);
             Console.WriteLine("\nPlötzlich stürzt eine große graue Eule mit gefährlichen Augen aus dem Baum auf dich herab!");
-            Thread.Sleep(4000);
+            Thread.Sleep(3000);
             Console.WriteLine("\nDu erschrickst und flüchtest in letzter Sekunde in den nächstgelegenen Busch.\nHier bist du erstmal in Sicherheit...");
             Thread.Sleep(3000);
             Console.WriteLine("\nDrücke <Enter> um fortzufahren.");

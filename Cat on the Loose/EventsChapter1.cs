@@ -3,31 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleHelpers;
 
 namespace Cat_on_the_Loose
 {
+    
     internal class EventsChapter1
     {
         public static void Chapter1Rats()
         {
-            Console.WriteLine("Was möchtest du tun?");
+            Console.WriteLine("\nWas möchtest du tun?\n");
             Console.WriteLine("1. Kämpfen");
             Console.WriteLine("2. Versuchen vorbei zu schleichen");
+            Console.WriteLine("Deine Wahl: ");
             string choice = Console.ReadLine();
 
             switch (choice)
             {
                 case "1":
                     Console.Clear();
-                    Console.WriteLine("Es kommt zum Kampf!");
-                    Thread.Sleep(3000);
-                    Console.WriteLine("\nDie Ratten stürzen sich auf dich!");
-                    Thread.Sleep(3000);
-                    Console.WriteLine("\nObwohl die Ratten sehr flink und in Überzahl waren, konntest du sie besiegen.\nDu hast allerdings ein paar Hiebe eingefangen und dadurch Gesundheit eingebüßt.\nHunger und Müdigkeit sind gestiegen.");
-                    Player.CurrentPlayer.ReduceHealth(20);
+                    Helpers.TypeWriter("Es kommt zum Kampf!", 70);
+                    Thread.Sleep(2000);
+                    Helpers.TypeWriter("\nDie Ratten stürzen sich auf dich!", 70);
+                    Thread.Sleep(2000);
+                    Helpers.TypeWriter("\nObwohl die Ratten sehr flink und in Überzahl waren, konntest du sie besiegen.\nDu hast allerdings ein paar Hiebe eingefangen und dadurch Gesundheit eingebüßt.\nHunger und Müdigkeit sind gestiegen.", 70);
+                    Thread.Sleep(2000);
+                    Player.CurrentPlayer.ReduceHealth(100);
                     Player.CurrentPlayer.IncreaseHunger(20);
                     Player.CurrentPlayer.IncreaseFatigue(20);
                     Player.CurrentPlayer.GetStatusInfo();
+                    Thread.Sleep(2000);
                     Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
                     Console.ReadKey();
                     Console.Clear();
@@ -38,7 +43,7 @@ namespace Cat_on_the_Loose
                     break;
                 case "2":
                     Console.Clear();
-                    Console.WriteLine("Obwohl die Ratten sehr aufmerksam sind, gelingt es dir, dich unbemerkt an Ihnen vorbei zu schleichen.\nDas war knapp!");
+                    Helpers.TypeWriter("Obwohl die Ratten sehr aufmerksam sind, gelingt es dir, dich unbemerkt an Ihnen vorbei zu schleichen.\n\nDas war knapp!", 70);
                     Thread.Sleep(3000);
                     Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
                     Console.ReadKey();
@@ -78,10 +83,12 @@ namespace Cat_on_the_Loose
             Console.WriteLine("Ihr teilt beide ordentlich aus");
             Thread.Sleep(3000);
             Console.WriteLine("Du hast es geschafft, den Kater in die Flucht zu schlagen!\nDu hast allerdings ein paar Hiebe eingefangen und dadurch Gesundheit eingebüßt. Hunger und Müdigkeit sind gestiegen.");
-            Player.CurrentPlayer.ReduceHealth(50);
+            Thread.Sleep(2000);
+            Player.CurrentPlayer.ReduceHealth(100);
             Player.CurrentPlayer.IncreaseHunger(30);
             Player.CurrentPlayer.IncreaseFatigue(40);
             Player.CurrentPlayer.GetStatusInfo();
+            Thread.Sleep(2000);
             Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
             Console.ReadKey();
             Console.Clear();

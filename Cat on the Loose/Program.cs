@@ -1,6 +1,7 @@
 ﻿
 using System.Transactions;
 using Cat_on_the_Loose;
+using ConsoleHelpers;
 
 StateOfGame GameState = new StateOfGame();
 
@@ -34,10 +35,10 @@ while (isPlaying == true && Player.CurrentPlayer.Health >= 0)
         isPlaying = false;
     }
 }
-if (Player.CurrentPlayer.Health == 0)
-{
-    Player.GameOver(GameState, isPlaying);
-}
+//if (Player.CurrentPlayer.Health == 0)
+//{
+//    Player.GameOver(GameState, isPlaying);
+//}
 Console.Clear();
 Console.WriteLine("Danke für's Spielen! Bis zum nächsten Mal.");
 //ENDE

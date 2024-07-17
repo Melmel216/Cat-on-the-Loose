@@ -9,21 +9,25 @@ using System.Threading.Tasks;
 namespace Cat_on_the_Loose
 {
     using static Player;
+    using ConsoleHelpers;
 
     internal class Chapter1 : Chapter
     {
         public override void Start()
         {
             Console.Clear();
-            Console.WriteLine("Kapitel 1: Das Erwachen");
+            Helpers.TypeWriter("Kapitel 1: Das Erwachen", 70);
             Thread.Sleep(3000);
-            Console.WriteLine("Du öffnest deine Augen und findest dich in einer dunklen, engen Gasse wieder.");
-            Thread.Sleep(4000);
-            Console.WriteLine("\nDu kannst dich nicht mehr erinnern, wie du hierher gekommen bist.\nDu weißt nur, dass dein Name " + Player.CurrentPlayer.Name + " ist,\nund, dass irgendwo ein schönes, warmes und sicheres Zuhause auf dich wartet.");
-            Thread.Sleep(6000);
-            Console.WriteLine("\nDein Ziel ist es, so schnell wie möglich dorthin zurück zu gelangen.\n\nEs ist bitter kalt und dir ist bewusst, dass du bald etwas zu essen brauchen wirst.");
-            Thread.Sleep(4000);
-            Console.WriteLine("\n\n\nTipp: Behalte deine Gesundheit, Hunger und Müdigkeit immer im Blick!\nUm deinen Hunger zu stillen, suche etwas zu essen.\nUm deine Müdigkeit zu reduzieren, halte ein Nickerchen.\nÜberall in der Spielwelt findest du schmackhafte CatDrinks, die Gesundheit wiederherstellen.\nWenn deine Gesundheit bei 0 ist, ist das Spiel zuende.");
+            Helpers.TypeWriter("Du öffnest deine Augen und findest dich in einer dunklen, engen Gasse wieder.", 70);
+            Thread.Sleep(2000);
+            Helpers.TypeWriter("Du kannst dich nicht mehr erinnern, wie du hierher gekommen bist.\nDu weißt nur, dass irgendwo ein schönes, warmes und sicheres Zuhause auf dich wartet.", 70);
+            Thread.Sleep(2000);
+            Helpers.TypeWriter("Dein Ziel ist es, so schnell wie möglich dorthin zurück zu gelangen.", 70);
+            Thread.Sleep(2000);
+            Helpers.TypeWriter("Es ist bitter kalt und dir ist bewusst, dass du bald etwas zu essen brauchen wirst.", 70);
+            Thread.Sleep(2000);
+            Console.WriteLine("\n\n\nTipp: Behalte deine Gesundheit, Hunger und Müdigkeit immer im Blick!\n\nUm deinen Hunger zu stillen, suche etwas zu essen.\nUm deine Müdigkeit zu reduzieren, halte ein Nickerchen.\nÜberall in der Spielwelt kannst du schmackhafte CatDrinks finden, die Gesundheit wiederherstellen.\n\nWenn entweder deine Gesundheit bei 0 ist,\noder Hunger oder Müdigkeit bei 100 sind,\nwirst du ohnmächtig und das Spiel ist vorbei.");
+            Thread.Sleep(2000);
             Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
             Console.ReadKey();
             Console.Clear();
@@ -34,7 +38,9 @@ namespace Cat_on_the_Loose
             {
                 Player.CurrentPlayer.GetStatusInfo();
                 Console.WriteLine();
-                Console.WriteLine("Die Gasse sieht ziemlich gruselig aus...\nWas möchtest du tun?\n");
+                Helpers.TypeWriter("Die Gasse sieht ziemlich gruselig aus...", 70);
+                Thread.Sleep(2000);
+                Console.WriteLine("\nWas möchtest du tun?\n");
                 Console.WriteLine("1. Die Umgebung untersuchen");
                 Console.WriteLine("2. Nach Nahrung suchen");
                 Console.WriteLine("3. Ein Nickerchen machen");
@@ -46,8 +52,8 @@ namespace Cat_on_the_Loose
                 {
                     case "1":
                         Console.Clear();
-                        Console.WriteLine("Du untersuchst die Umgebung und siehst eine Gruppe von mutierten Riesen-Ratten, die den Weg versperren.");
-                        Thread.Sleep(1000);
+                        Helpers.TypeWriter("Du untersuchst die Umgebung und siehst eine Gruppe von mutierten Riesen-Ratten, die den Weg versperren.",  70);
+                        Thread.Sleep(2000);
                         EventsChapter1.Chapter1Rats();
                         inChapter1 = false; //Chapter beenden
                         //Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
