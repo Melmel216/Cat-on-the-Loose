@@ -39,7 +39,7 @@ namespace Cat_on_the_Loose
                 Console.WriteLine("1. Vorsichtig prüfen, ob die Luft rein ist");
                 Console.WriteLine("2. Nach Nahrung suchen");
                 Console.WriteLine("3. Ein Nickerchen machen");
-                Console.WriteLine("4. Eine Weile im Busch abwarten");  //eventuell weglassen
+                Console.WriteLine("4. Im Busch bleiben");
                 Console.WriteLine("Deine Wahl: ");
                 string choice = Console.ReadLine();
 
