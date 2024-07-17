@@ -15,6 +15,9 @@ namespace Cat_on_the_Loose
     {
         public override void Start()
         {
+            Player.CurrentPlayer.Health = 200;
+            Player.CurrentPlayer.Hunger = 0;
+            Player.CurrentPlayer.Fatigue = 0;
             Console.Clear();
             Helpers.TypeWriter("Kapitel 1: Das Erwachen", 70);
             Thread.Sleep(3000);

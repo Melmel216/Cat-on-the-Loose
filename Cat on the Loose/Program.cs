@@ -10,7 +10,7 @@ Intro.GameStart();
 
 //Programm-Ablauf:
 bool isPlaying = true;
-while (isPlaying == true && Player.CurrentPlayer.Health >= 0)
+while (isPlaying)
 {
     if (!GameState.Chapter1Done)
     {
@@ -32,6 +32,22 @@ while (isPlaying == true && Player.CurrentPlayer.Health >= 0)
     if (input == "ja")
     {
         isPlaying = false;
+    }
+    else if (input == "nein")
+    {
+        Console.WriteLine("Möchtest du das Spiel erneut starten?");
+        string choice = Console.ReadLine();
+        if (choice != "ja")
+        {
+            isPlaying = false;
+        }
+        else
+        {
+            isPlaying = true;
+            GameState.Chapter1Done = false;
+            GameState.Chapter2Done= false;
+        }
+
     }
 }
 //if (Player.CurrentPlayer.Health == 0)
