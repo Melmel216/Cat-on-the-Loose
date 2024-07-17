@@ -11,6 +11,7 @@ namespace Cat_on_the_Loose
     {
         public static void Chapter2Owl()
         {
+            Console.Clear();
             Helpers.TypeWriter("Im ersten Moment kannst du nichts erkennen, der Park ist dunkel und die Eule scheint nicht mehr da zu sein...", 70);
             Thread.Sleep(2000);
             Helpers.TypeWriter("Da!", 70);
@@ -19,6 +20,7 @@ namespace Cat_on_the_Loose
             Thread.Sleep(2000);
             Helpers.TypeWriter("Ihr starrt euch für einen unendlich langen Moment in die Augen.", 70);
             Thread.Sleep(2000);
+            Console.Clear();
             Helpers.TypeWriter("Die Eule unterbricht die gespannte Stille:", 70);
             Helpers.TypeWriter("\"Hallo, du scheinst, dich verlaufen zu haben?\"", 70);
             Thread.Sleep(2000);
@@ -30,16 +32,15 @@ namespace Cat_on_the_Loose
             Thread.Sleep(2000);
             Helpers.TypeWriter("Eule: \"Warum so zögerlich? Ich erkläre es dir, also....\"", 70);
             Thread.Sleep(3000);
+            Console.Clear();
             Helpers.TypeWriter("Nachdem die Eule zuende gesprochen hat, bist du froh,\ndass du dich getraut hast, aus dem Busch zu schauen.\n\nDu weißt jetzt, wie du nach Hause kommst und folgst den Hinweisen der Eule...", 70);
             Thread.Sleep(2000);
+            Console.Clear();
             Helpers.TypeWriter("Es dauert nicht lange, bis du dein Zuhause in der Ferne erkennst!\nNur noch wenige Meter...", 70);
+            Thread.Sleep(2000);
+            Console.Clear();
             Helpers.TypeWriter("Geschafft!\nDu hast dein Zuhause erreicht und schlüpfst erleichtert durch die vertraute Katzenklappe hinein in Sicherheit!", 70);
             Thread.Sleep(2000);
-            //Player.CurrentPlayer.ReduceHealth(50);
-            //Player.CurrentPlayer.IncreaseHunger(20);
-            //Player.CurrentPlayer.IncreaseFatigue(30);
-            //Player.CurrentPlayer.GetStatusInfo();
-            //Thread.Sleep(2000);
             Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
             Console.ReadKey();
             Console.Clear();
