@@ -25,9 +25,8 @@ while (isPlaying == true && Player.CurrentPlayer.Health >= 0)
         chapter2.Start();
         GameState.Chapter2Done = true;
     }
-
-    //alle Kapitel hier
-
+    Helpers.TypeWriter("Gratulation!\nDu hast alle Kapitel geschafft!", 70);
+    Thread.Sleep(1000);
     Console.WriteLine("Möchtest du das Spiel beenden? (ja/nein)");
     string input = Console.ReadLine().ToLower();
     if (input == "ja")

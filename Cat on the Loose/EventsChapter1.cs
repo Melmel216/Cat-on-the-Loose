@@ -12,6 +12,9 @@ namespace Cat_on_the_Loose
     {
         public static void Chapter1Rats()
         {
+            Thread.Sleep(2000);
+            Helpers.TypeWriter("Oh nein! Sie haben dich entdeckt!", 70);
+            Thread.Sleep(2000);
             Console.WriteLine("\nWas möchtest du tun?\n");
             Console.WriteLine("1. Kämpfen");
             Console.WriteLine("2. Versuchen vorbei zu schleichen");
@@ -28,7 +31,7 @@ namespace Cat_on_the_Loose
                     Thread.Sleep(2000);
                     Helpers.TypeWriter("\nObwohl die Ratten sehr flink und in Überzahl waren, konntest du sie besiegen.\nDu hast allerdings ein paar Hiebe eingefangen und dadurch Gesundheit eingebüßt.\nHunger und Müdigkeit sind gestiegen.", 70);
                     Thread.Sleep(2000);
-                    Player.CurrentPlayer.ReduceHealth(100);
+                    Player.CurrentPlayer.ReduceHealth(30);
                     Player.CurrentPlayer.IncreaseHunger(20);
                     Player.CurrentPlayer.IncreaseFatigue(20);
                     Player.CurrentPlayer.GetStatusInfo();
@@ -44,7 +47,7 @@ namespace Cat_on_the_Loose
                 case "2":
                     Console.Clear();
                     Helpers.TypeWriter("Obwohl die Ratten sehr aufmerksam sind, gelingt es dir, dich unbemerkt an Ihnen vorbei zu schleichen.\n\nDas war knapp!", 70);
-                    Thread.Sleep(3000);
+                    Thread.Sleep(2000);
                     Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
                     Console.ReadKey();
                     Chapter1Cardboard();
@@ -65,34 +68,35 @@ namespace Cat_on_the_Loose
         public static void Chapter1Cardboard()
         {
             Console.Clear();
-            Console.WriteLine("Du gehst weiter und entdeckst einen Karton, der an die Mauer gelehnt ist.");
-            Thread.Sleep(3000);
-            Console.WriteLine("\nDu untersuchst den Karton...");
-            Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
-            Console.ReadKey();
-            Console.Clear();
-            Console.WriteLine("Ein mopsiger Kater hat es sich unter dem Karton gemütlich gemacht.\nEr starrt dich mit großen Augen an und fühlt sich gestört.");
-            Thread.Sleep(3000);
-            Console.WriteLine("\nEr greift dich an!");
+            Helpers.TypeWriter("Du gehst weiter und entdeckst einen Karton, der an die Mauer gelehnt ist.", 70);
+            Thread.Sleep(2000);
+            Helpers.TypeWriter("\nDu untersuchst den Karton und hebst ihn mit einer Pfote vorsichtig an...", 70);
             Thread.Sleep(2000);
             Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
             Console.ReadKey();
             Console.Clear();
-            Console.WriteLine("Es kommt zum Kampf!");
-            Thread.Sleep(3000);
-            Console.WriteLine("Ihr teilt beide ordentlich aus");
-            Thread.Sleep(3000);
-            Console.WriteLine("Du hast es geschafft, den Kater in die Flucht zu schlagen!\nDu hast allerdings ein paar Hiebe eingefangen und dadurch Gesundheit eingebüßt. Hunger und Müdigkeit sind gestiegen.");
+            Helpers.TypeWriter("Ein mopsiger Kater hat es sich unter dem Karton gemütlich gemacht.\n\nEr starrt dich mit großen Augen an und fühlt sich gestört.", 70);
             Thread.Sleep(2000);
-            Player.CurrentPlayer.ReduceHealth(100);
-            Player.CurrentPlayer.IncreaseHunger(30);
-            Player.CurrentPlayer.IncreaseFatigue(40);
+            Helpers.TypeWriter("Er greift dich an!", 70);
+            Thread.Sleep(2000);
+            Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
+            Console.ReadKey();
+            Console.Clear();
+            Helpers.TypeWriter("Es kommt zum Kampf!", 70);
+            Thread.Sleep(2000);
+            Helpers.TypeWriter("Ihr teilt beide ordentlich aus.", 70);
+            Thread.Sleep(2000);
+            Helpers.TypeWriter("Du hast es geschafft, den Kater in die Flucht zu schlagen!\nDu hast jedoch Einiges abbekommen und dadurch Gesundheit eingebüßt. Hunger und Müdigkeit sind gestiegen.", 70);
+            Thread.Sleep(2000);
+            Player.CurrentPlayer.ReduceHealth(50);
+            Player.CurrentPlayer.IncreaseHunger(20);
+            Player.CurrentPlayer.IncreaseFatigue(30);
             Player.CurrentPlayer.GetStatusInfo();
             Thread.Sleep(2000);
             Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
             Console.ReadKey();
             Console.Clear();
-            Console.WriteLine("Du entdeckst hinter dem Karton eine Öffnung in der Mauer und schlüpfst hindurch.");
+            Helpers.TypeWriter("Du entdeckst hinter dem Karton eine Öffnung in der Mauer und schlüpfst hindurch...", 70);
         }
     }
 }

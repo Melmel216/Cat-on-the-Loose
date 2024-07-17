@@ -18,9 +18,9 @@ namespace Cat_on_the_Loose
             Console.Clear();
             Helpers.TypeWriter("Kapitel 1: Das Erwachen", 70);
             Thread.Sleep(3000);
-            Helpers.TypeWriter("Du öffnest deine Augen und findest dich in einer dunklen, engen Gasse wieder.", 70);
+            Helpers.TypeWriter("Du öffnest deine Augen und findest dich in einer dunklen, engen Gasse wieder.\n\nSchnell erkennst du, dass es eine Sackgasse ist.\n\nEs ist kein Ausgang in Sicht und die Mauern sind viel zu hoch und zu glatt,\num zu springen oder zu klettern.", 70);
             Thread.Sleep(2000);
-            Helpers.TypeWriter("Du kannst dich nicht mehr erinnern, wie du hierher gekommen bist.\nDu weißt nur, dass irgendwo ein schönes, warmes und sicheres Zuhause auf dich wartet.", 70);
+            Helpers.TypeWriter("Dir ist schwummrig und du kannst dich nicht mehr erinnern, wie du hierher gekommen bist.\nDu weißt nur, dass irgendwo ein schönes, warmes und sicheres Zuhause auf dich wartet.", 70);
             Thread.Sleep(2000);
             Helpers.TypeWriter("Dein Ziel ist es, so schnell wie möglich dorthin zurück zu gelangen.", 70);
             Thread.Sleep(2000);
@@ -62,32 +62,35 @@ namespace Cat_on_the_Loose
                         break;
                     case "2":
                         Console.Clear();
-                        Console.WriteLine("Zum Glück gibt es in der Gasse genug Mülltonnen, in denen du bestimmt etwas zu essen findest.\nDu durchwühlst die erste Tonne und findest eine geöffnete, noch halbvolle Dose Thunfisch.\nYummi!");
-                        CurrentPlayer.Eat(20);
+                        Helpers.TypeWriter("Zum Glück gibt es in der Gasse genug Mülltonnen, in denen du bestimmt etwas zu essen findest.\nDu durchwühlst die erste Tonne und findest eine geöffnete, noch halbvolle Dose Thunfisch.\nYummi!", 70);
+                        Thread.Sleep(2000);
+                        CurrentPlayer.Eat(30);
                         Player.CurrentPlayer.GetStatusInfo();
+                        Thread.Sleep(2000);
                         Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
                         Console.ReadKey();
                         Console.Clear();
                         break;
                     case "3":
                         Console.Clear();
-                        Console.WriteLine("Du machst ein Nickerchen und träumst von fliegenden Fischen...");
-                        Thread.Sleep(4000);
-                        CurrentPlayer.Sleep(30);
-                        CurrentPlayer.IncreaseHunger(20);
+                        Helpers.TypeWriter("Du machst ein Nickerchen und träumst von fliegenden Fischen...", 70);
+                        Thread.Sleep(3000);
+                        CurrentPlayer.Sleep(40);
+                        CurrentPlayer.IncreaseHunger(15);
                         Player.CurrentPlayer.GetStatusInfo();
+                        Thread.Sleep(2000);
                         Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
                         Console.ReadKey();
                         Console.Clear();
                         break;
                     case "4":
                         Console.Clear();
-                        Console.WriteLine("Du suchst nach einem Ausweg, jedoch sind auf den ersten Blick nur Mülltonnen und leere Kisten zu sehen.");
+                        Helpers.TypeWriter("Du suchst nach einem Ausweg, jedoch sind auf den ersten Blick nur Mülltonnen und leere Kisten zu sehen.", 70);
                         EventsChapter1.Chapter1Cardboard();
                         inChapter1 = false; //Chapter beenden
-                        Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
-                        Console.ReadKey();
-                        Console.Clear();
+                        //Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
+                        //Console.ReadKey();
+                        //Console.Clear();
                         break;
                     default:
                         Console.Clear();
