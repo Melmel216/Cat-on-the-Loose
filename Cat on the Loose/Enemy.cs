@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Cat_on_the_Loose
 {
+
+    //wird noch nicht verwendet !!
+
     internal class Enemy
     {
         public int Health { get; set; }
