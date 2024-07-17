@@ -53,6 +53,7 @@ namespace Cat_on_the_Loose
             Thread.Sleep(2000);
             Helpers.TypeWriter("Ihr starrt euch für einen unendlich langen Moment in die Augen.", 70);
             Thread.Sleep(2000);
+            Console.Clear();
             Helpers.TypeWriter("Der Hase unterbricht die gespannte Stille:", 70);
             Helpers.TypeWriter("\"Hallo, hast du dich verlaufen?\"\n\"Ich kann dir helfen!\"", 70);
             Thread.Sleep(2000);
@@ -64,12 +65,14 @@ namespace Cat_on_the_Loose
             Thread.Sleep(2000);
             Helpers.TypeWriter("Hase: \"Warum so zögerlich? Ich zeig es dir, komm mit!\"", 70);
             Thread.Sleep(3000);
+            Console.Clear();
             Helpers.TypeWriter("Der Hase führt dich auf einem sicheren Weg an der immernoch lauernden Eule vorbei,\naus dem Park hinaus und eine lange Straße hinunter...", 70);
             Thread.Sleep(2000);
             Helpers.TypeWriter("Plötzlich fällst du in ein tiefes Loch!", 70);
             Thread.Sleep(2000);
             Helpers.TypeWriter("Alles um dich herum wird schwarz und du fällst in Ohnmacht...", 70);
             Thread.Sleep(2000);
+            Console.Clear();
             Helpers.TypeWriter("Als du zu dir kommst, stellst du fest,\ndass du in deinem Lieblings-Körbchen liegst.\nUm dich herum liegen alle deine Spielsachen, du bist zuhause!\nEs war zum Glück alles nur ein furchtbarer Traum.", 70);
             Thread.Sleep(2000);
             //Player.CurrentPlayer.ReduceHealth(50);
