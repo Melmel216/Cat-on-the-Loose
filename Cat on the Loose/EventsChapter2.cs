@@ -76,11 +76,6 @@ namespace Cat_on_the_Loose
             Console.Clear();
             Helpers.TypeWriter("Als du zu dir kommst, stellst du fest,\ndass du in deinem Lieblings-Körbchen liegst.\nUm dich herum liegen alle deine Spielsachen, du bist zuhause!\nEs war zum Glück alles nur ein furchtbarer Traum.", 70);
             Thread.Sleep(2000);
-            //Player.CurrentPlayer.ReduceHealth(50);
-            //Player.CurrentPlayer.IncreaseHunger(20);
-            //Player.CurrentPlayer.IncreaseFatigue(30);
-            //Player.CurrentPlayer.GetStatusInfo();
-            //Thread.Sleep(2000);
             Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
             Console.ReadKey();
             Console.Clear();
