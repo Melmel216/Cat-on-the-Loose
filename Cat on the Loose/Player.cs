@@ -124,7 +124,7 @@ namespace Cat_on_the_Loose
             {
                 CurrentPlayer.Health = 200;
             }
-            Console.WriteLine("Du schlabberst einen CatDrink.\n\nYummi!");
+            Console.WriteLine("Du schlabberst genüßlich einen CATDRINK.\n\nYummi!");
             Thread.Sleep(2000);
             Console.WriteLine($"Deine Gesundheit beträgt jetzt {CurrentPlayer.Health}/200.");
         }

@@ -21,7 +21,7 @@ namespace Cat_on_the_Loose
                 Player.CurrentPlayer.GetStatusInfo();
                 Console.WriteLine("Was möchtest du tun?");
                 Console.WriteLine("1. Angreifen");
-                Console.WriteLine("2. CatDrink schlabbern");
+                Console.WriteLine("2. CATDRINK schlabbern");
                 Console.WriteLine("3. Versuchen, zu fliehen");
                 Console.WriteLine("Deine Wahl:");
                 string choice = Console.ReadLine();
@@ -29,24 +29,28 @@ namespace Cat_on_the_Loose
                 switch (choice)
                 {
                     case "1":
+                        Console.Clear();
                         CurrentPlayer.AttackEnemy(CurrentEnemy);
                         Thread.Sleep(1000);
                         Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
                         Console.ReadKey();
                         break;
                     case "2":
+                        Console.Clear();
                         CurrentPlayer.Heal(30);
                         Thread.Sleep(1000);
                         Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
                         Console.ReadKey();
                         break;
                     case "3":
+                        Console.Clear();
                         Console.WriteLine("Nice Try!\nDu hast keine Chance zu entkommen!");
                         Thread.Sleep(1000);
                         Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
                         Console.ReadKey();
                         break;
                     default:
+                        Console.Clear();
                         Console.WriteLine("Ungültige Wahl. Bitte versuche es erneut.");
                         Thread.Sleep(1000);
                         Console.WriteLine("\nDrücke <Enter> um fortzufahren.");

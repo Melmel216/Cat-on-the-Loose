@@ -39,7 +39,7 @@ namespace Cat_on_the_Loose
                 Player.CurrentPlayer.GetStatusInfo();
                 Console.WriteLine();
                 Helpers.TypeWriter("Die Gasse sieht ziemlich gruselig aus...", 70);
-                Thread.Sleep(2000);
+                Thread.Sleep(800);
                 Console.WriteLine("\nWas möchtest du tun?\n");
                 Console.WriteLine("1. Die Umgebung untersuchen");
                 Console.WriteLine("2. Nach Nahrung suchen");
@@ -69,7 +69,7 @@ namespace Cat_on_the_Loose
                         CurrentPlayer.Eat(30);
                         Player.CurrentPlayer.GetStatusInfo();
                         Thread.Sleep(2000);
-                        Helpers.TypeWriter("Du hast außerdem eine Dose CATDRINK gefunden!\nYei!", 70);
+                        Helpers.TypeWriter("\n\nDu hast außerdem eine Dose CATDRINK gefunden!\nYei!", 70);
                         Thread.Sleep(2000);
                         Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
                         Console.ReadKey();

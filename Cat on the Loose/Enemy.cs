@@ -48,6 +48,9 @@ namespace Cat_on_the_Loose
         {
             CurrentPlayer.ReduceHealthPlayer(CurrentEnemy.Damage);
             Console.WriteLine($"{CurrentEnemy.Name} greift dich an und verursacht {CurrentEnemy.Damage} Schaden. Deine Gesundheit ist gesunken, sie liegt nun bei {CurrentPlayer.Health}/200");
+            Thread.Sleep(2000);
+            Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
+            Console.ReadKey();
             Player.CurrentPlayer.CheckPlayerState();
         }
 

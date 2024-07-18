@@ -35,7 +35,7 @@ namespace Cat_on_the_Loose
                     Fight.Fighting(Player.CurrentPlayer, Enemy.CurrentEnemy);
 
 
-
+                    Console.Clear();
                     Helpers.TypeWriter("\nObwohl die Ratten sehr flink und in Überzahl waren, konntest du sie besiegen.\nDu hast allerdings ein paar Hiebe eingefangen und dadurch Gesundheit eingebüßt.\nHunger und Müdigkeit sind gestiegen.", 70);
                     Thread.Sleep(2000);
                     //Player.CurrentPlayer.ReduceHealth(30);
@@ -105,7 +105,7 @@ namespace Cat_on_the_Loose
             Enemy.CurrentEnemy.Damage = 20;
             Fight.Fighting(Player.CurrentPlayer, Enemy.CurrentEnemy);
 
-
+            Console.Clear();
             Helpers.TypeWriter("Du hast es geschafft, den Kater in die Flucht zu schlagen!\nDu hast jedoch Einiges abbekommen und dadurch Gesundheit eingebüßt. Hunger und Müdigkeit sind gestiegen.", 70);
             Thread.Sleep(2000);
             //Player.CurrentPlayer.ReduceHealth(50);
