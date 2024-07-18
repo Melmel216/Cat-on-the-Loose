@@ -57,7 +57,7 @@ namespace Cat_on_the_Loose
                     Helpers.TypeWriter("Obwohl die Ratten sehr aufmerksam sind, gelingt es dir, dich unbemerkt an Ihnen vorbei zu schleichen.\n\nDas war knapp!", 70);
                     Console.Clear();
                     Helpers.TypeWriter("Hoppla! Was war das?", 70);
-                    Helpers.TypeWriter("Du bist über etwas gestolpert, das sich angefühlt wie....\n\neine Dose CatDrink! Yei!", 70);
+                    Helpers.TypeWriter("Du bist über etwas gestolpert, das sich angefühlt wie....\n\neine Dose CATDRINK!\nYei!", 70);
                     Helpers.TypeWriter("Du schleichst dich weiter auf leisen Sohlen davon....", 70);
                     Thread.Sleep(2000);
                     Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
@@ -101,6 +101,8 @@ namespace Cat_on_the_Loose
             //Helpers.TypeWriter("Ihr teilt beide ordentlich aus.", 70);
             //Thread.Sleep(2000);
             Enemy.CurrentEnemy.Name = "Böser Kater";
+            Enemy.CurrentEnemy.Health = 50;
+            Enemy.CurrentEnemy.Damage = 20;
             Fight.Fighting(Player.CurrentPlayer, Enemy.CurrentEnemy);
 
 
