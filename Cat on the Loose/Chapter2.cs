@@ -88,6 +88,8 @@ namespace Cat_on_the_Loose
                         Helpers.TypeWriter("Du beschließt vorerst im Busch in Sicherheit zu bleiben,\nwo dich die Eule nicht finden kann.", 50);
                         Thread.Sleep(2000);
                         Helpers.TypeWriter("Plötzlich hörst du ein Rascheln hinter dir...", 50);
+                        Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
+                        Console.ReadKey();
                         EventsChapter2.Chapter2Rabbit();
                         inChapter2 = false; //Chapter beenden
                         //Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
