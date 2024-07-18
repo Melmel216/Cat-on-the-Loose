@@ -32,6 +32,10 @@ namespace Cat_on_the_Loose
 
         //public static Enemy AngryCat = new Enemy("Kater", 100, 10);
 
+        public void GetStatusInfoEnemy()
+        {
+            Console.WriteLine("Gegner Gesundheit: (" + CurrentEnemy.Health + ") |");
+        }
 
         public void ReduceHealthEnemy(int damage)
         {

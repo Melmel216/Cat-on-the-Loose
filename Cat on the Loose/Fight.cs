@@ -19,6 +19,7 @@ namespace Cat_on_the_Loose
             {
                 Console.Clear();
                 Player.CurrentPlayer.GetStatusInfo();
+                Enemy.CurrentEnemy.GetStatusInfoEnemy();
                 Console.WriteLine("Was möchtest du tun?");
                 Console.WriteLine("1. Angreifen");
                 Console.WriteLine("2. CATDRINK schlabbern");

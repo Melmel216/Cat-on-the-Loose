@@ -61,7 +61,7 @@ namespace Cat_on_the_Loose
 
         public void GetStatusInfo()
         {
-            Console.WriteLine("Gesundheit: (" + CurrentPlayer.Health + "/200) | " + "Hunger: (" + CurrentPlayer.Hunger + "/100) | " + "Müdigkeit: (" + CurrentPlayer.Fatigue + "/100)");
+            Console.WriteLine("Deine Gesundheit: (" + CurrentPlayer.Health + "/200) | " + "Hunger: (" + CurrentPlayer.Hunger + "/100) | " + "Müdigkeit: (" + CurrentPlayer.Fatigue + "/100)");
         }
 
         public void Eat(int menge)
