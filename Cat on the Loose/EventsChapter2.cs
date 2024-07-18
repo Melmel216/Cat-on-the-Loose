@@ -16,7 +16,7 @@ namespace Cat_on_the_Loose
             Thread.Sleep(2000);
             Helpers.TypeWriter("Da!", 70);
             Thread.Sleep(2000);
-            Helpers.TypeWriter("Du entdeckst die Eule, sie steht gut 2 Meter vom Busch entfernt und hat dich fest im Blick.", 70);
+            Helpers.TypeWriter("Du entdeckst die Eule, sie steht gut 2 Meter vom Busch entfernt und hat dich fest im Blick!", 70);
             Thread.Sleep(2000);
             Helpers.TypeWriter("Ihr starrt euch für einen unendlich langen Moment in die Augen.", 70);
             Thread.Sleep(2000);
@@ -26,18 +26,24 @@ namespace Cat_on_the_Loose
             Thread.Sleep(2000);
             Helpers.TypeWriter("Du bist verwundert, die Eule spricht!\nUnd sie scheint sogar ganz freundlich zu sein.", 70);
             Thread.Sleep(2000);
-            Helpers.TypeWriter("Die Eule weiter:\"Hab keine Angst, ich beobachte dich schon eine ganze Weile und kann dir helfen. Ich weiß, wie du nach Hause kommst.\"", 70);
+            Helpers.TypeWriter("Die Eule weiter:\"Hab keine Angst, ich beobachte dich schon eine ganze Weile und kann dir helfen.\nIch weiß, wie du nach Hause kommst.\"", 70);
             Thread.Sleep(2000);
             Helpers.TypeWriter("Du bist misstrauisch und wartest ab..", 70);
             Thread.Sleep(2000);
             Helpers.TypeWriter("Eule: \"Warum so zögerlich? Ich erkläre es dir, also....\"", 70);
-            Thread.Sleep(3000);
+            Thread.Sleep(2000);
+            Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
+            Console.ReadKey();
             Console.Clear();
             Helpers.TypeWriter("Nachdem die Eule zuende gesprochen hat, bist du froh,\ndass du dich getraut hast, aus dem Busch zu schauen.\n\nDu weißt jetzt, wie du nach Hause kommst und folgst den Hinweisen der Eule...", 70);
             Thread.Sleep(2000);
+            Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
+            Console.ReadKey();
             Console.Clear();
             Helpers.TypeWriter("Es dauert nicht lange, bis du dein Zuhause in der Ferne erkennst!\nNur noch wenige Meter...", 70);
             Thread.Sleep(2000);
+            Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
+            Console.ReadKey();
             Console.Clear();
             Helpers.TypeWriter("Geschafft!\nDu hast dein Zuhause erreicht und schlüpfst erleichtert durch die vertraute Katzenklappe hinein in Sicherheit!", 70);
             Thread.Sleep(2000);
@@ -48,6 +54,7 @@ namespace Cat_on_the_Loose
 
         public static void Chapter2Rabbit()
         {
+            Console.Clear();
             Helpers.TypeWriter("Du drehst dich um und siehst, wie ein Hase zu dir in den Busch kriecht!", 70);
             Thread.Sleep(2000);
             Helpers.TypeWriter("Du machst einen Buckel und bringst dich in Angriffsstellung!", 70);
@@ -65,7 +72,9 @@ namespace Cat_on_the_Loose
             Helpers.TypeWriter("Du bist misstrauisch und wartest ab..", 70);
             Thread.Sleep(2000);
             Helpers.TypeWriter("Hase: \"Warum so zögerlich? Ich zeig es dir, komm mit!\"", 70);
-            Thread.Sleep(3000);
+            Thread.Sleep(2000);
+            Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
+            Console.ReadKey();
             Console.Clear();
             Helpers.TypeWriter("Der Hase führt dich auf einem sicheren Weg an der immernoch lauernden Eule vorbei,\naus dem Park hinaus und eine lange Straße hinunter...", 70);
             Thread.Sleep(2000);
@@ -73,8 +82,10 @@ namespace Cat_on_the_Loose
             Thread.Sleep(2000);
             Helpers.TypeWriter("Alles um dich herum wird schwarz und du fällst in Ohnmacht...", 70);
             Thread.Sleep(2000);
+            Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
+            Console.ReadKey();
             Console.Clear();
-            Helpers.TypeWriter("Als du zu dir kommst, stellst du fest,\ndass du in deinem Lieblings-Körbchen liegst.\nUm dich herum liegen alle deine Spielsachen, du bist zuhause!\nEs war zum Glück alles nur ein furchtbarer Traum.", 70);
+            Helpers.TypeWriter("Als du zu dir kommst, stellst du fest,\ndass du in deinem Lieblings-Körbchen liegst.\n\nUm dich herum liegen alle deine Spielsachen, du bist zuhause!\n\nEs war zum Glück alles nur ein furchtbarer Traum.", 70);
             Thread.Sleep(2000);
             Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
             Console.ReadKey();

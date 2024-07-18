@@ -19,7 +19,8 @@ namespace Cat_on_the_Loose
             Thread.Sleep(2000);
             Helpers.TypeWriter("\nEin riesiger Park liegt vor dir. Alles scheint still und friedlich, es ist niemand in Sicht....", 70);
             Thread.Sleep(2000);
-            Helpers.TypeWriter("\nDirekt vor dir steht ein hoch gewachsener Baum, er scheint sehr alt zu sein.", 70);
+            Console.Clear();
+            Helpers.TypeWriter("Direkt vor dir steht ein hoch gewachsener Baum, er scheint sehr alt zu sein.", 70);
             Thread.Sleep(2000);
             Helpers.TypeWriter("\nPlötzlich stürzt eine große graue Eule mit gefährlichen Augen aus dem Baum auf dich herab!", 70);
             Thread.Sleep(2000);
@@ -73,7 +74,7 @@ namespace Cat_on_the_Loose
                     case "3":
                         Console.Clear();
                         Helpers.TypeWriter("Du machst ein Nickerchen und träumst von bunten Filzbällen...", 70);
-                        Thread.Sleep(2000);
+                        Thread.Sleep(3000);
                         CurrentPlayer.Sleep(40);
                         CurrentPlayer.IncreaseHunger(15);
                         Player.CurrentPlayer.GetStatusInfo();
@@ -85,6 +86,7 @@ namespace Cat_on_the_Loose
                     case "4":
                         Console.Clear();
                         Helpers.TypeWriter("Du beschließt vorerst im Busch in Sicherheit zu bleiben,\nwo dich die Eule nicht finden kann.", 70);
+                        Thread.Sleep(2000);
                         Helpers.TypeWriter("Plötzlich hörst du ein Rascheln hinter dir...", 70);
                         EventsChapter2.Chapter2Rabbit();
                         inChapter2 = false; //Chapter beenden

@@ -66,68 +66,86 @@ namespace Cat_on_the_Loose
 
         public void Eat(int menge)
         {
-            Hunger -= menge;
-            if (Hunger < 0)
+            CurrentPlayer.Hunger -= menge;
+            if (CurrentPlayer.Hunger < 0)
             {
-                Hunger = 0;
+                CurrentPlayer.Hunger = 0;
             }
-            Console.WriteLine($"Nach dem Essen beträgt dein Hunger nun {Hunger}/100");
+            Console.WriteLine($"Nach dem Essen beträgt dein Hunger nun {CurrentPlayer.Hunger}/100");
         }
 
         public void Sleep(int menge)
         {
-            Fatigue -= menge;
-            if (Fatigue < 0)
+            CurrentPlayer.Fatigue -= menge;
+            if (CurrentPlayer.Fatigue < 0)
             {
-                Fatigue = 0;
+                CurrentPlayer.Fatigue = 0;
             }
-            Console.WriteLine($"Nach dem Nickerchen beträgt deine Müdigkeit nun {Fatigue}/100");
+            Console.WriteLine($"Nach dem Nickerchen beträgt deine Müdigkeit nun {CurrentPlayer.Fatigue}/100");
         }
 
         public void IncreaseHunger(int menge)
         {
-            Hunger += menge;
-            if (Hunger > 100)
+            CurrentPlayer.Hunger += menge;
+            if (CurrentPlayer.Hunger > 100)
             {
-                Hunger = 100;
+                CurrentPlayer.Hunger = 100;
             }
-            Console.WriteLine($"Dein Hunger hat zugenommen, er liegt nun bei {Hunger}/100");
+            Console.WriteLine($"Dein Hunger hat zugenommen, er liegt nun bei {CurrentPlayer.Hunger}/100");
             CheckPlayerState();
         }
 
         public void IncreaseFatigue(int menge)
         {
-            Fatigue += menge;
-            if (Fatigue > 100)
+            CurrentPlayer.Fatigue += menge;
+            if (CurrentPlayer.Fatigue > 100)
             {
-                Fatigue = 100;
+                CurrentPlayer.Fatigue = 100;
             }
-            Console.WriteLine($"Deine Müdigkeit hat zugenommen, sie liegt nun bei {Fatigue}/100");
+            Console.WriteLine($"Deine Müdigkeit hat zugenommen, sie liegt nun bei {CurrentPlayer.Fatigue}/100");
             CheckPlayerState();
         }
 
-        public void ReduceHealth(int damage)
+        public void ReduceHealthPlayer(int damage)
         {
             CurrentPlayer.Health -= damage;
             if (CurrentPlayer.Health < 0)
             {
                 CurrentPlayer.Health = 0;
             }
-            Console.WriteLine($"Deine Gesundheit ist gesunken, sie liegt nun bei {Health}/200");
-            CheckPlayerState();
+            //Console.WriteLine("Deine Gesundheit ist gesunken!");
+            //CheckPlayerState();
         }
 
-
-        private void CheckPlayerState()
+        public void Heal(int menge)
         {
-            if (Hunger == 100 || Fatigue == 100 || Health == 0)
+            CurrentPlayer.Health += menge;
+            if (CurrentPlayer.Health > 200)
+            {
+                CurrentPlayer.Health = 200;
+            }
+            Console.WriteLine("Du schlabberst einen CatDrink.\n\nYummi!");
+            Thread.Sleep(2000);
+            Console.WriteLine($"Deine Gesundheit beträgt jetzt {CurrentPlayer.Health}/200.");
+        }
+
+        public void AttackEnemy(Enemy CurrentEnemy)
+        {
+            CurrentEnemy.ReduceHealthEnemy(CurrentPlayer.Damage);
+            Console.WriteLine($"Du greifst {CurrentEnemy.Name} an und verursachst {CurrentPlayer.Damage} Schaden.\n{CurrentEnemy.Name} hat jetzt noch {CurrentEnemy.Health} Gesundheit.");   
+        }
+
+        public void CheckPlayerState()
+        {
+            if (CurrentPlayer.Hunger == 100 || CurrentPlayer.Fatigue == 100 || CurrentPlayer.Health == 0)
             {
                 GameOver();
             }
         }
 
-        private void GameOver()
+        public void GameOver()
         {
+            Console.Clear();
             Console.WriteLine("Du bist ohnmächtig geworden. Spiel beendet.");
             Console.WriteLine("\nDrücke <Enter> um das Spiel zu verlassen.");
             Console.ReadKey();

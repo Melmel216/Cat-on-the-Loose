@@ -5,13 +5,13 @@ using ConsoleHelpers;
 
 StateOfGame GameState = new StateOfGame();
 
-//Einleitung
-Intro.GameStart();
-
 //Programm-Ablauf:
 bool isPlaying = true;
 while (isPlaying)
 {
+    //Einleitung
+    Intro.GameStart();
+
     if (!GameState.Chapter1Done)
     {
         Chapter1 chapter1 = new Chapter1();
