@@ -16,15 +16,15 @@ namespace Cat_on_the_Loose
         public override void Start()
         {
             Console.Clear();
-            Helpers.TypeWriter("Kapitel 1: Das Erwachen", 80);
+            Helpers.TypeWriter("Kapitel 1: Das Erwachen", 50);
             Thread.Sleep(3000);
-            Helpers.TypeWriter("Du öffnest deine Augen und findest dich in einer dunklen, engen Gasse wieder.\n\nSchnell erkennst du, dass es eine Sackgasse ist.\n\nEs ist kein Ausgang in Sicht und die Mauern sind viel zu hoch und zu glatt,\num zu springen oder zu klettern.", 80);
+            Helpers.TypeWriter("Du öffnest deine Augen und findest dich in einer dunklen, engen Gasse wieder.\n\nSchnell erkennst du, dass es eine Sackgasse ist.\n\nEs ist kein Ausgang in Sicht und die Mauern sind viel zu hoch und zu glatt,\num zu springen oder zu klettern.", 50);
             Thread.Sleep(2000);
-            Helpers.TypeWriter("Dir ist schwummrig und du kannst dich nicht mehr erinnern, wie du hierher gekommen bist.\nDu weißt nur, dass irgendwo ein schönes, warmes und sicheres Zuhause auf dich wartet.", 80);
+            Helpers.TypeWriter("Dir ist schwummrig und du kannst dich nicht mehr erinnern, wie du hierher gekommen bist.\nDu weißt nur, dass irgendwo ein schönes, warmes und sicheres Zuhause auf dich wartet.", 50);
             Thread.Sleep(2000);
-            Helpers.TypeWriter("Dein Ziel ist es, so schnell wie möglich dorthin zurück zu gelangen.", 80);
+            Helpers.TypeWriter("Dein Ziel ist es, so schnell wie möglich dorthin zurück zu gelangen.", 50);
             Thread.Sleep(2000);
-            Helpers.TypeWriter("Es ist bitter kalt und dein Hunger ist groß. Vielleicht solltest du dir etwas zu Essen suchen...", 80);
+            Helpers.TypeWriter("Es ist bitter kalt und dein Hunger ist groß. Vielleicht solltest du dir etwas zu Essen suchen...", 50);
             Thread.Sleep(2000);
             Console.WriteLine("\n\n\nTipp: Behalte deine Gesundheit, Hunger und Müdigkeit immer im Blick!\n\nUm deinen Hunger zu stillen, suche etwas zu essen.\nUm deine Müdigkeit zu reduzieren, halte ein Nickerchen.\nÜberall in der Spielwelt kannst du schmackhafte CatDrinks finden, die Gesundheit wiederherstellen.\n\nWenn entweder deine Gesundheit bei 0 ist,\noder Hunger oder Müdigkeit bei 100 sind,\nwirst du ohnmächtig und das Spiel ist vorbei.");
             Thread.Sleep(2000);
@@ -38,7 +38,7 @@ namespace Cat_on_the_Loose
             {
                 Player.CurrentPlayer.GetStatusInfo();
                 Console.WriteLine();
-                Helpers.TypeWriter("Die Gasse sieht ziemlich gruselig aus...", 80);
+                Helpers.TypeWriter("Die Gasse sieht ziemlich gruselig aus...", 50);
                 Thread.Sleep(800);
                 Console.WriteLine("\nWas möchtest du tun?\n");
                 Console.WriteLine("1. Die Umgebung untersuchen");
@@ -52,7 +52,7 @@ namespace Cat_on_the_Loose
                 {
                     case "1":
                         Console.Clear();
-                        Helpers.TypeWriter("Du siehst dich in der Gasse um und entdeckst eine Gruppe von mutierten Riesen-Ratten, die den Weg versperren.", 80);
+                        Helpers.TypeWriter("Du siehst dich in der Gasse um und entdeckst eine Gruppe von mutierten Riesen-Ratten, die den Weg versperren.", 50);
                         Thread.Sleep(2000);
                         EventsChapter1.Chapter1Rats();
                         inChapter1 = false; //Chapter beenden
@@ -62,14 +62,14 @@ namespace Cat_on_the_Loose
                         break;
                     case "2":
                         Console.Clear();
-                        Helpers.TypeWriter("Zum Glück gibt es in der Gasse genug Mülltonnen, in denen du bestimmt etwas zu essen findest.", 80);
-                        Helpers.TypeWriter("Du durchwühlst die erste Tonne und findest eine geöffnete, noch halbvolle Dose Thunfisch.", 80);
-                        Helpers.TypeWriter("Yummi!", 80);
+                        Helpers.TypeWriter("Zum Glück gibt es in der Gasse genug Mülltonnen, in denen du bestimmt etwas zu essen findest.", 50);
+                        Helpers.TypeWriter("Du durchwühlst die erste Tonne und findest eine geöffnete, noch halbvolle Dose Thunfisch.", 50);
+                        Helpers.TypeWriter("Yummi!", 50);
                         Thread.Sleep(2000);
                         CurrentPlayer.Eat(30);
                         Player.CurrentPlayer.GetStatusInfo();
                         Thread.Sleep(2000);
-                        Helpers.TypeWriter("\n\nDu hast außerdem eine Dose CATDRINK gefunden!\nYei!", 80);
+                        Helpers.TypeWriter("\n\nDu hast außerdem eine Dose CATDRINK gefunden!\nYei!", 50);
                         Thread.Sleep(2000);
                         Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
                         Console.ReadKey();
@@ -77,7 +77,7 @@ namespace Cat_on_the_Loose
                         break;
                     case "3":
                         Console.Clear();
-                        Helpers.TypeWriter("Du machst ein Nickerchen und träumst von fliegenden Fischen...", 80);
+                        Helpers.TypeWriter("Du machst ein Nickerchen und träumst von fliegenden Fischen...", 50);
                         Thread.Sleep(3000);
                         CurrentPlayer.Sleep(40);
                         CurrentPlayer.IncreaseHunger(15);
@@ -89,7 +89,7 @@ namespace Cat_on_the_Loose
                         break;
                     case "4":
                         Console.Clear();
-                        Helpers.TypeWriter("Du suchst nach einem Ausweg, jedoch sind auf den ersten Blick nur Mülltonnen und leere Kisten zu sehen.", 80);
+                        Helpers.TypeWriter("Du suchst nach einem Ausweg, jedoch sind auf den ersten Blick nur Mülltonnen und leere Kisten zu sehen.", 50);
                         Thread.Sleep(2000);
                         EventsChapter1.Chapter1Cardboard();
                         inChapter1 = false; //Chapter beenden

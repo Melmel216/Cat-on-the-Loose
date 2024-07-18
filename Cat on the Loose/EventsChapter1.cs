@@ -13,7 +13,7 @@ namespace Cat_on_the_Loose
         public static void Chapter1Rats()
         {
             Thread.Sleep(2000);
-            Helpers.TypeWriter("Oh nein! Sie haben dich entdeckt!", 80);
+            Helpers.TypeWriter("Schnell, sonst entdecken sie dich!", 50);
             Thread.Sleep(2000);
             Console.WriteLine("\nWas möchtest du tun?\n");
             Console.WriteLine("1. Kämpfen");
@@ -25,9 +25,11 @@ namespace Cat_on_the_Loose
             {
                 case "1":
                     Console.Clear();
-                    Helpers.TypeWriter("Es kommt zum Kampf!", 80);
+                    Helpers.TypeWriter("Du gehst mutig auf die Ratten zu...", 50);
                     Thread.Sleep(2000);
-                    Helpers.TypeWriter("\nDie Ratten stürzen sich auf dich!", 80);
+                    Helpers.TypeWriter("Es kommt zum Kampf!", 50);
+                    Thread.Sleep(2000);
+                    Helpers.TypeWriter("\nDie Ratten stürzen sich auf dich!", 50);
                     Thread.Sleep(2000);
                     Console.Clear();
 
@@ -36,7 +38,7 @@ namespace Cat_on_the_Loose
 
 
                     Console.Clear();
-                    Helpers.TypeWriter("\nObwohl die Ratten sehr flink und in Überzahl waren, konntest du sie besiegen.\nDu hast allerdings ein paar Hiebe eingefangen und dadurch Gesundheit eingebüßt.\nHunger und Müdigkeit sind gestiegen.", 80);
+                    Helpers.TypeWriter("\nObwohl die Ratten sehr flink und in Überzahl waren, konntest du sie besiegen.\nDu hast allerdings ein paar Hiebe eingefangen und dadurch Gesundheit eingebüßt.\nHunger und Müdigkeit sind gestiegen.", 50);
                     Thread.Sleep(2000);
                     //Player.CurrentPlayer.ReduceHealth(30);
 
@@ -54,14 +56,16 @@ namespace Cat_on_the_Loose
                     break;
                 case "2":
                     Console.Clear();
-                    Helpers.TypeWriter("Obwohl die Ratten sehr aufmerksam sind, gelingt es dir, dich unbemerkt an Ihnen vorbei zu schleichen.\n\nDas war knapp!", 80);
-                    Console.Clear();
-                    Helpers.TypeWriter("Hoppla! Was war das?", 80);
-                    Helpers.TypeWriter("Du bist über etwas gestolpert, das sich angefühlt wie....\n\neine Dose CATDRINK!\nYei!", 80);
+                    Helpers.TypeWriter("Obwohl die Ratten sehr aufmerksam sind, gelingt es dir, dich unbemerkt an Ihnen vorbei zu schleichen.\n\nDas war knapp!", 50);
                     Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
                     Console.ReadKey();
                     Console.Clear();
-                    Helpers.TypeWriter("Du schleichst dich weiter auf leisen Sohlen davon....", 80);
+                    Helpers.TypeWriter("Hoppla! Was war das?", 50);
+                    Helpers.TypeWriter("Du bist über etwas gestolpert, das sich angefühlt wie....\n\neine Dose CATDRINK!\nYei!", 50);
+                    Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
+                    Console.ReadKey();
+                    Console.Clear();
+                    Helpers.TypeWriter("Du schleichst dich weiter auf leisen Sohlen davon....", 50);
                     Thread.Sleep(2000);
                     Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
                     Console.ReadKey();
@@ -83,21 +87,21 @@ namespace Cat_on_the_Loose
         public static void Chapter1Cardboard()
         {
             Console.Clear();
-            Helpers.TypeWriter("Du gehst weiter und entdeckst einen Karton, der an die Mauer gelehnt ist.", 80);
+            Helpers.TypeWriter("Du gehst weiter und entdeckst einen Karton, der an die Mauer gelehnt ist.", 50);
             Thread.Sleep(2000);
-            Helpers.TypeWriter("\nDu beschnupperst den Karton und hebst ihn mit einer Pfote vorsichtig an...", 80);
-            Thread.Sleep(2000);
-            Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
-            Console.ReadKey();
-            Console.Clear();
-            Helpers.TypeWriter("Ein mopsiger Kater hat es sich unter dem Karton gemütlich gemacht.\n\nEr starrt dich mit großen Augen an und fühlt sich gestört.", 80);
-            Thread.Sleep(2000);
-            Helpers.TypeWriter("Er greift dich an!", 80);
+            Helpers.TypeWriter("\nDu beschnupperst den Karton und hebst ihn mit einer Pfote vorsichtig an...", 50);
             Thread.Sleep(2000);
             Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
             Console.ReadKey();
             Console.Clear();
-            Helpers.TypeWriter("Es kommt zum Kampf!", 80);
+            Helpers.TypeWriter("Ein mopsiger Kater hat es sich unter dem Karton gemütlich gemacht.\n\nEr starrt dich mit großen Augen an und fühlt sich gestört.", 50);
+            Thread.Sleep(2000);
+            Helpers.TypeWriter("Er greift dich an!", 50);
+            Thread.Sleep(2000);
+            Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
+            Console.ReadKey();
+            Console.Clear();
+            Helpers.TypeWriter("Es kommt zum Kampf!", 50);
             Thread.Sleep(2000);
             Console.Clear();
             //KAMPF 
@@ -107,7 +111,7 @@ namespace Cat_on_the_Loose
             Fight.Fighting(Player.CurrentPlayer, Enemy.CurrentEnemy);
 
             Console.Clear();
-            Helpers.TypeWriter("Du hast es geschafft, den Kater in die Flucht zu schlagen!\nDu hast jedoch Einiges abbekommen und dadurch Gesundheit eingebüßt. Hunger und Müdigkeit sind gestiegen.", 80);
+            Helpers.TypeWriter("Du hast es geschafft, den Kater in die Flucht zu schlagen!\nDu hast jedoch Einiges abbekommen und dadurch Gesundheit eingebüßt.\nHunger und Müdigkeit sind gestiegen.", 50);
             Thread.Sleep(2000);
             Player.CurrentPlayer.IncreaseHunger(20);
             Player.CurrentPlayer.IncreaseFatigue(30);
@@ -116,7 +120,7 @@ namespace Cat_on_the_Loose
             Console.WriteLine("\nDrücke <Enter> um fortzufahren.");
             Console.ReadKey(); //KAMPF ENDE
             Console.Clear();
-            Helpers.TypeWriter("Du entdeckst hinter dem Karton eine Öffnung in der Mauer und schlüpfst hindurch...", 80);
+            Helpers.TypeWriter("Du entdeckst hinter dem Karton eine Öffnung in der Mauer und schlüpfst hindurch...", 50);
             Thread.Sleep(2000);
         }
     }
